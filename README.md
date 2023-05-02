@@ -1,4 +1,4 @@
-# ragnarbuilds
+# ragnabuilds
 
 ## Project setup
 ```
