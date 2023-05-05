@@ -1,7 +1,7 @@
 <template>
-  <div class="flex">
-    <div class="flex">
-      <form class="w-32">
+  <div class="flex grid grid-cols-3">
+    <div>
+      <form>
         <div><input type="number" placeholder="STR" v-model="data.STR" min="1" max="130"><span></span><span
             v-if="data.bless || data.sticks || data.foods">+ {{ data.blessBonus + data.sticksBonus + data.foodsBonus
             }}</span></div>
@@ -19,6 +19,7 @@
             v-if="data.sticks || data.foods">+ {{ data.sticksBonus + data.foodsBonus }}</span></div>
       </form>
     </div>
+    <div class="grid">
     <form>
       <div><label>Palito</label><input class="mx-3" id="sticks" type="checkbox" @change="sticksUp()"
           v-model="data.sticks"></div>
@@ -35,9 +36,9 @@
         </select>
       </div>
     </form>
-    <div class="flex">
-      <h1> IC: {{ varibleCast }}</h1>
-      <h1></h1>
+    </div>
+    <div>
+      <h1 class="w-full"> IC: {{ varibleCast }}</h1>
     </div>
   </div>
 </template>
