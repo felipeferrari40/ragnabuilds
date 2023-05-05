@@ -11,7 +11,7 @@
 
 <script>
 
-import BuildCalculator from '@/components/BuildCalculator/'
+import BuildCalculator from '@/components/BuildCalculator/BuildCalculator.vue'
 import StatusCalculator from '@/components/StatusCalculator/StatusCalculator.vue'
 
 export default {

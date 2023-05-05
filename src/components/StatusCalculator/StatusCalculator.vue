@@ -26,10 +26,12 @@
       </div>
       <div><label>Bless</label><input class="mx-3" id="bless" type="checkbox" @change="blessUp()" v-model="data.bless">
       </div>
-      <div>
+      <div class="w-full">
         <p>Classe : {{ selected }} </p><br/>
-        <select class="w-42" v-model="selected"> 
-          <option v-for="charClass in charClasses" :key="charClass.id" :value='charClass.name'>{{ charClass.name }}</option>
+        <select class="w-42" v-model="selected">
+          <option value="">Selecionar Classe</option>
+          <option v-for="charClass in charClasses" :key="charClass.id" :value='charClass.name'>{{ charClass.name }}
+          </option>
         </select>
       </div>
     </form>
@@ -44,27 +46,26 @@
 import { reactive, computed, ref } from 'vue';
 
 const charClasses = ref([
-  { name: 'Rune Knight', id: 1},
+  { name: 'Rune Knight', id: 1 },
   { name: 'Guillotine Cross', id: 2 },
-  { name: 'Arch Bishop', id: 3},
-  { name: 'Ranger', id:4 },
-  { name: 'Warlock', id:5 },
-  { name: 'Mechanic', id:6 },
-  { name: 'Royal Guard', id:7 },
-  { name: 'Shadow Chaser', id:8 },
-  { name: 'Shura', id:9 },
-  { name: 'Maestro', id:10 },
-  { name: 'Wanderer', id:11 },
-  { name: 'Sorcerer', id:12 },
-  { name: 'Geneticist', id:13 },
-  { name: 'Rebelion', id:14 },
-  { name: 'Kagerou/Oboro', id:15 },
-  { name: 'Soul Reaper', id:16 },
-  { name: 'Star Emperor', id:17 }
+  { name: 'Arch Bishop', id: 3 },
+  { name: 'Ranger', id: 4 },
+  { name: 'Warlock', id: 5 },
+  { name: 'Mechanic', id: 6 },
+  { name: 'Royal Guard', id: 7 },
+  { name: 'Shadow Chaser', id: 8 },
+  { name: 'Shura', id: 9 },
+  { name: 'Maestro', id: 10 },
+  { name: 'Wanderer', id: 11 },
+  { name: 'Sorcerer', id: 12 },
+  { name: 'Geneticist', id: 13 },
+  { name: 'Rebelion', id: 14 },
+  { name: 'Kagerou/Oboro', id: 15 },
+  { name: 'Soul Reaper', id: 16 },
+  { name: 'Star Emperor', id: 17 }
 ])
 
 const selected = ref('')
-
 
 const data = reactive({
   STR: null,
@@ -115,7 +116,8 @@ const varibleCast = computed(
 </script>
 
 
-<style>form div {
+<style>
+form div {
   margin: 5px;
   padding: 5px;
   text-align: start;
